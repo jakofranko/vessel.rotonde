@@ -13,8 +13,6 @@ class VesselRotonde
     @path = File.expand_path(File.join(File.dirname(__FILE__), "/"))
     @docs = "A communication application for Nataniev instances."
 
-    load_folder("#{@path}/actions/*")
-
     install(:dialog,:call)
     install(:dialog,:answer)
     install(:dialog,:notify)

@@ -18,33 +18,40 @@ class ActionServe
 
   def act q = nil
     
-    rotondeFeed = {
-      :profile => {
-        :name => "Devine Lu Linvega",
-        :location => "Huahine"
-      },
-      :feed => [
-        {
-          :date => "20170621-1", 
-          :type => "reply",
-          :ref => "rotonde.monochromatic.co#20170621-4",
-          :text => "Nice work!"
-        },
-        {
-          :date => "20170621", 
-          :type => "media",
-          :media => "http://wiki.xxiivv.com/public.oscean/media/diary/339.jpg",
-          :text => "Worked on the Rotonde specs.",
-          :url => "http://xxiivv.com/index.htm"
-        }
-      ],
-      :portal => [
-        "rotonde.monochromatic.co",
-      ]
-    }
+    load_folder("#{@host.path}/objects/*")
 
-    return rotondeFeed.to_json
+    ro = Rotonde.new
+    ro.name = "Devine Lu Linvega"
+    ro.location = "Huahine"
+    ro.feed = logs
+    ro.portal.push("rotonde.monochromatic.co")
+
+    return ro.to_json
     
+  end
+
+  def logs
+
+    a = []
+    count = 0
+    Memory_Array.new("horaire","#{@host.path}/../vessel.oscean").to_a.each do |log|
+      if count > 30 then break end
+      topic = log["TERM"]
+      text = log["TEXT"]
+      media = log["PICT"].to_i
+
+      entry = {}
+      entry[:date] = log["DATE"]
+
+      if text then entry[:text] = text end
+      if media > 0 then entry[:media] = "http://wiki.xxiivv.com/public.oscean/media/diary/#{media}.jpg" end
+      if topic.to_s != "" then entry[:url] = "http://wiki.xxiivv.com/#{topic}}" end
+  
+      a.push(entry)
+      count += 1 
+    end
+    return a
+
   end
 
 end

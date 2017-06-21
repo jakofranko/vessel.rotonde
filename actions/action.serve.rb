@@ -21,8 +21,12 @@ class ActionServe
     load_folder("#{@host.path}/objects/*")
 
     ro = Rotonde.new
+    
     ro.name = "Devine Lu Linvega"
     ro.location = "Huahine"
+    ro.avatar = "http://wiki.xxiivv.com/public.oscean/media/brand/logo.devine.lu.linvega.png"
+    ro.color = "#72dec2"
+
     ro.feed = logs
     ro.portal.push("rotonde.monochromatic.co")
 
@@ -46,7 +50,7 @@ class ActionServe
       if text then entry[:text] = text end
       if media > 0 then entry[:media] = "http://wiki.xxiivv.com/public.oscean/media/diary/#{media}.jpg" end
       if topic.to_s != "" then entry[:url] = "http://wiki.xxiivv.com/#{topic}}" end
-  
+
       a.push(entry)
       count += 1 
     end

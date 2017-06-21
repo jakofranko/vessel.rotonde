@@ -7,6 +7,9 @@ class Rotonde
 
   attr_accessor :name
   attr_accessor :location
+  attr_accessor :avatar
+  attr_accessor :color
+  
   attr_accessor :feed
   attr_accessor :portal
 
@@ -26,7 +29,9 @@ class Rotonde
     return {
       :profile => {
         :name => @name, 
-        :location => @location
+        :location => @location,
+        :avatar => @avatar,
+        :color => @color
       },
       :feed => @feed,
       :portal => @portal

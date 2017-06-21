@@ -29,7 +29,9 @@ class ActionServe
 
     ro.feed = logs
     ro.portal.push("rotonde.monochromatic.co")
-
+    ro.portal.push("rotonde.cblgh.org")
+    ro.portal.push("rotonde.anxl.faith")
+    
     return ro.to_json
     
   end

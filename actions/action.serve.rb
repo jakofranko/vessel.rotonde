@@ -45,7 +45,7 @@ class ActionServe
       media = log["PICT"].to_i
 
       entry = {}
-      entry[:date] = log["DATE"]
+      entry[:time] = Timestamp.new(log["DATE"]).unix.to_s
 
       if text then entry[:text] = text end
       if media > 0 then entry[:media] = "http://wiki.xxiivv.com/public.oscean/media/diary/#{media}.jpg" end

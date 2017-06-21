@@ -19,12 +19,12 @@ The answer is the minimum required structure for the data answered by rotonde ca
   "feed":
   [
     {
-      "date":"20170621-1",
+      "time":"20170621-1",
       "ref":"rotonde.monochromatic.co 20170621-4",
       "text":"Nice work Ian!"
     },
     {
-      "date":"20170621",
+      "time":"20170621",
       "media":"http://wiki.xxiivv.com/public.oscean/media/diary/339.jpg",
       "text":"Worked on the Rotonde specs.",
       "url":"http://xxiivv.com/index.htm"
@@ -50,8 +50,8 @@ Hex value for display highlights.
 
 ### Feed
 Array of Entries, recommended limit of 30.
-#### Date
-Date value, without dashes and zerofilled, Y-M-D Multiple logs in a single day can be encoded with DATE-1, DATE-2, ...
+#### Time
+Unixtime.
 #### Media
 Url to attached image, audio, video.
 #### Ref

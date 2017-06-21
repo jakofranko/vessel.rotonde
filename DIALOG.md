@@ -37,3 +37,30 @@ The answer is the minimum required structure for the data answered by rotonde ca
   ]
 }
 ```
+
+### Profile
+Profile information.
+#### Name
+Your display name.
+#### Location
+Current location.
+#### Avatar
+Url to your image.
+#### Color
+Hex value for display highlights.
+
+### Feed
+Array of Entries.
+#### Date
+Date value, without dashes and zerofilled, Y-M-D
+#### Type
+Template code, can be anything.
+#### Media
+Url to attached image, audio, video.
+#### Text
+text content of the entry.
+#### Url
+Attached URL of the entry.
+
+### Portal
+Array of subscribed rotonde urls.

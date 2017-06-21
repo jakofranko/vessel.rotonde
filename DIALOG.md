@@ -32,7 +32,9 @@ The answer is the minimum required structure for the data answered by rotonde ca
   ],
   "portal":
   [
-    "rotonde.monochromatic.co"
+    "rotonde.monochromatic.co",
+    "rotonde.cblgh.org",
+    "rotonde.anxl.faith"
   ]
 }
 ```

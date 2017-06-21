@@ -11,7 +11,9 @@ The answer is the minimum required structure for the data answered by rotonde ca
   "profile":
   {
     "name":"Devine Lu Linvega",
-    "location":"Huahine"
+    "location":"Huahine",
+    "avatar":"http://wiki.xxiivv.com/avatar.gif",
+    "color":"#72dec2"
   },
   "feed":
   [

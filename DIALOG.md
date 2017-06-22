@@ -13,18 +13,17 @@ The answer is the minimum required structure for the data answered by rotonde ca
   {
     "name":"Devine Lu Linvega",
     "location":"Huahine",
-    "avatar":"http://wiki.xxiivv.com/avatar.gif",
     "color":"#72dec2"
   },
   "feed":
   [
     {
-      "time":"20170621-1",
-      "ref":"rotonde.monochromatic.co 20170621-4",
+      "time":"1497499200",
+      "ref":"rotonde.monochromatic.co 1496203200",
       "text":"Nice work Ian!"
     },
     {
-      "time":"20170621",
+      "time":"1497326400",
       "media":"http://wiki.xxiivv.com/public.oscean/media/diary/339.jpg",
       "text":"Worked on the Rotonde specs.",
       "url":"http://xxiivv.com/index.htm"
@@ -45,8 +44,6 @@ Profile information.
 Your display name.
 #### Location
 Current location.
-#### Avatar
-Url to your image.
 #### Color
 Hex value for display highlights.
 
@@ -57,11 +54,11 @@ Unixtime.
 #### Media
 Url to attached image, audio, video.
 #### Ref
-Url of content, with entry code
+Url of distant rotonde instance, followed by unixtime
 #### Text
 text content of the entry.
 #### Url
 Attached URL of the entry.
 
 ### Portal
-Array of subscribed rotonde urls, recommended limit of 30.
+Array of subscribed rotonde instance urls, recommended limit of 30.
